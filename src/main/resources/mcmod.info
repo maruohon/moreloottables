@@ -1,0 +1,16 @@
+[
+{
+  "modid": "moreloottables",
+  "name": "More Loot Tables",
+  "description": "Adds Loot Tables to some entities that in vanilla don't have them",
+  "version": "${mod_version}",
+  "mcversion": "${minecraft_version}",
+  "url": "http://minecraft.curseforge.com/projects/more-loot-tables",
+  "updateUrl": "",
+  "authorList": ["masa"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
