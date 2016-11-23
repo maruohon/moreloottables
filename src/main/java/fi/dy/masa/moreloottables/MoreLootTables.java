@@ -14,7 +14,7 @@ import fi.dy.masa.moreloottables.proxy.IProxy;
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION,
     guiFactory = "fi.dy.masa.moreloottables.config.MoreLootTablesGuiFactory",
     updateJSON = "https://raw.githubusercontent.com/maruohon/moreloottables/master/update.json",
-    acceptableRemoteVersions = "*", acceptedMinecraftVersions = "1.10.2")
+    acceptableRemoteVersions = "*", acceptedMinecraftVersions = "1.11")
 public class MoreLootTables
 {
     @Mod.Instance(Reference.MOD_ID)
@@ -25,7 +25,6 @@ public class MoreLootTables
 
     public static Logger logger;
 
-    public static final ResourceLocation ENTITIES_DRAGON = LootTableList.register(new ResourceLocation("minecraft", "entities/boss/dragon"));
     public static final ResourceLocation ENTITIES_WITHER = LootTableList.register(new ResourceLocation("minecraft", "entities/boss/wither"));
 
     @Mod.EventHandler

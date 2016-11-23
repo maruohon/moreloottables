@@ -1,8 +1,13 @@
 {
     "homepage": "http://minecraft.curseforge.com/projects/more-loot-tables",
     "promos": {
+        "1.11-latest": "0.1.1",
+        "1.11-recommended": "0.1.1",
         "1.10.2-latest": "0.1.0",
         "1.10.2-recommended": "0.1.0"
+    },
+    "1.11": {
+        "0.1.1": "Update to Minecraft 1.11\nRemove the Ender Dragon loot table - it is now in vanilla"
     },
     "1.10.2": {
         "0.1.0": "Initial release"
