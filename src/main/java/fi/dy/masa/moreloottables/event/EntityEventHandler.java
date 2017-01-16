@@ -4,6 +4,9 @@ import java.lang.reflect.Field;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.boss.EntityDragon;
 import net.minecraft.entity.boss.EntityWither;
+import net.minecraft.entity.monster.EntityZombie;
+import net.minecraft.entity.monster.ZombieType;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.ReflectionHelper;
@@ -32,6 +35,7 @@ public class EntityEventHandler
         }
     }*/
 
+    @SuppressWarnings("deprecation")
     @SubscribeEvent
     public void onJoinWorld(EntityJoinWorldEvent event)
     {
@@ -63,6 +67,18 @@ public class EntityEventHandler
             catch (IllegalAccessException e)
             {
                 MoreLootTables.logger.error("Failed to set loot table for Ender Dragon");
+            }
+        }
+        else if (Configs.enableHusk && event.getWorld().isRemote == false && event.getEntity().getClass() == EntityZombie.class)
+        {
+            EntityZombie zombie = (EntityZombie) event.getEntity();
+
+            if (zombie.getZombieType() == ZombieType.HUSK)
+            {
+                NBTTagCompound nbt = new NBTTagCompound();
+                zombie.writeEntityToNBT(nbt);
+                nbt.setString("DeathLootTable", MoreLootTables.ENTITIES_HUSK.toString());
+                zombie.readEntityFromNBT(nbt);
             }
         }
     }

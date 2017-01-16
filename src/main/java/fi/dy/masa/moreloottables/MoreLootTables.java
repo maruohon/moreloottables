@@ -25,6 +25,7 @@ public class MoreLootTables
 
     public static Logger logger;
 
+    public static final ResourceLocation ENTITIES_HUSK   = LootTableList.register(new ResourceLocation("minecraft", "entities/husk"));
     public static final ResourceLocation ENTITIES_DRAGON = LootTableList.register(new ResourceLocation("minecraft", "entities/boss/dragon"));
     public static final ResourceLocation ENTITIES_WITHER = LootTableList.register(new ResourceLocation("minecraft", "entities/boss/wither"));
 

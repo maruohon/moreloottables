@@ -10,6 +10,7 @@ import fi.dy.masa.moreloottables.Reference;
 public class Configs
 {
     public static boolean enableDragon;
+    public static boolean enableHusk;
     public static boolean enableWither;
 
     public static File configurationFile;
@@ -42,6 +43,10 @@ public class Configs
         prop = conf.get(CATEGORY_GENERIC, "enableDragon", true).setRequiresMcRestart(false);
         prop.setComment("Enable a Loot Table for the Ender Dragon.");
         enableDragon = prop.getBoolean();
+
+        prop = conf.get(CATEGORY_GENERIC, "enableHusk", true).setRequiresMcRestart(false);
+        prop.setComment("Enable a separate Loot Table for the Husk variant of zombies.");
+        enableHusk = prop.getBoolean();
 
         prop = conf.get(CATEGORY_GENERIC, "enableWither", true).setRequiresMcRestart(false);
         prop.setComment("Enable a Loot Table for the Wither.");
