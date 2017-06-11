@@ -14,7 +14,7 @@ import fi.dy.masa.moreloottables.proxy.IProxy;
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION,
     guiFactory = "fi.dy.masa.moreloottables.config.MoreLootTablesGuiFactory",
     updateJSON = "https://raw.githubusercontent.com/maruohon/moreloottables/master/update.json",
-    acceptableRemoteVersions = "*", acceptedMinecraftVersions = "[1.11,1.11.2]")
+    acceptableRemoteVersions = "*", acceptedMinecraftVersions = "1.12")
 public class MoreLootTables
 {
     @Mod.Instance(Reference.MOD_ID)
