@@ -13,12 +13,6 @@ public class MoreLootTablesGuiFactory implements IModGuiFactory
     }
 
     @Override
-    public Class<? extends GuiScreen> mainConfigGuiClass()
-    {
-        return MoreLootTablesConfigGui.class;
-    }
-
-    @Override
     public boolean hasConfigGui()
     {
         return true;
@@ -32,13 +26,6 @@ public class MoreLootTablesGuiFactory implements IModGuiFactory
 
     @Override
     public Set<RuntimeOptionCategoryElement> runtimeGuiCategories()
-    {
-        return null;
-    }
-
-    @SuppressWarnings("deprecation")
-    @Override
-    public RuntimeOptionGuiHandler getHandlerFor(RuntimeOptionCategoryElement element)
     {
         return null;
     }
